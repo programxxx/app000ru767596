@@ -1,0 +1,26 @@
+{
+  "name": "app000ru767596",
+  "version": "0.0.1",
+  "description": "A sample Node.js app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "12.13.0",
+    "npm": "6.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "node",
+    "heroku"
+  ],
+  "author": "XXX",
+  "contributors": [
+    "XXX"
+  ],
+  "license": "MIT"
+}
