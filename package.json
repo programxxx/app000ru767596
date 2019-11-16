@@ -4,7 +4,8 @@
   "description": "A sample Node.js app",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "devStart": "nodemon index.js"
   },
   "engines": {
     "node": "12.x",
@@ -25,5 +26,9 @@
   "license": "MIT",
   "dependencies": {
     "mongoose": "^5.7.11"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^1.19.4"
   }
 }
