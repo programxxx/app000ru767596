@@ -1,8 +1,14 @@
 ;(() => {
 	'use strict';
+	if (process.env.NODE_ENV !== 'production') {
+		console.log('dotenv:', require('dotenv'));
+		require('dotenv').config();
+	}
+	console.log(`Node mode "${process.env.NODE_ENV}"`);
 	const mongoose = require('mongoose');
 	mongoose.connect(process.env.DATABASE_URL, {
-		useNewURLParser: true
+		useNewUrlParser: true,
+		useUnifiedTopology: true
 	});
 	const db = mongoose.connection;
 	let dbError = false;
