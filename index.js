@@ -17,7 +17,7 @@
 		dbError = err;
 		setTimeout(() => {
 			dbError = false;
-		}, 1000);
+		}, 10000);
 	});
 	db.once('open', () => {
 		console.log('Connected to mongoose OK');
