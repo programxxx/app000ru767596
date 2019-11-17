@@ -1,6 +1,7 @@
 {
   "name": "app000ru767596",
   "version": "0.0.1",
+  "private": true,
   "description": "A sample Node.js app",
   "main": "index.js",
   "scripts": {
