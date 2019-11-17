@@ -29,7 +29,7 @@
 		if (!dbError) {
 			res.write(`Database connection OK`);
 		} else {
-			res.write(dbError.toString())
+			res.write(dbError.toString());
 		}
 		res.end();
 	}).listen(process.env.PORT || 3000, err => {
