@@ -24,8 +24,14 @@
 	})
 	require('http').createServer((req, res) => {
 		if (req.url === '/favicon.ico') {res.end();return;}
-		res.setHeader('Content-type', 'text/plain');
-		res.write(`Heroku node.js test OK ${Math.random().toString(32).slice(2)} ${new Date().toString()}${'\r\n'}`);
+		res.setHeader('Content-type', 'text/html; charset=utf-8');
+		const start = new Date().getTime();
+		let sum = 0;
+		for (let i = 0; i < 1000000; i++) {
+			sum += Math.random();
+		}
+		const elapsed = new Date().getTime() - start;
+		res.write(`<h1>${sum} ${elapsed}</h1>`);
 		if (!dbError) {
 			res.write(`Database connection OK`);
 		} else {
